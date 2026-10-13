@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 316" width="1200" height="316" role="img" aria-label="Celestia guides: consensus node, validator and Fibre">
+<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.6" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="soft" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140a2e"/><stop offset=".6" stop-color="#070a16"/><stop offset="1" stop-color="#04060d"/></linearGradient>
+  <linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="#00b6fd" stop-opacity="0"/><stop offset=".5" stop-color="#00b6fd" stop-opacity=".55"/><stop offset="1" stop-color="#00b6fd" stop-opacity="0"/></linearGradient>
+  <clipPath id="sq"><rect x="820" y="34" width="243" height="243" rx="6"/></clipPath>
+</defs>
+<style>
+  .smp{fill:#b98bff;opacity:0;animation:smp 6s ease-in-out infinite}
+  @keyframes smp{0%,100%{opacity:0}8%{opacity:1}22%{opacity:0}}
+  .scan{animation:scan 4s linear infinite}
+  @keyframes scan{from{transform:translateY(-40px)}to{transform:translateY(243px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="316" rx="22" fill="url(#bg)"/>
+<rect x=".5" y=".5" width="1199" height="315" rx="22" fill="none" stroke="#b98bff" stroke-opacity=".18"/>
+<image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjQuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MDAgNTAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzdCMkJGOTt9Cgkuc3Qxe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxnPgoJPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMjUwIiBjeT0iMjUwIiByPSIyNTAiLz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MjkuNywyMTEuOGMtNy4yLTM0LjUtMjQuMy02Ni4xLTQ5LjgtOTEuNkMzNDUuMiw4NS41LDI5OS4xLDY2LjQsMjUwLDY2LjRzLTk1LjIsMTktMTI5LjksNTMuNwoJCWMtOC41LDguNS0xNS45LDE3LjYtMjIuNCwyNy4yYy0xLjksMi42LTMuNyw1LjMtNS4yLDguMmMtMTcsMjguMy0yNi4xLDYwLjYtMjYuMSw5NC41YzAsNDkuMSwxOS4xLDk1LjIsNTMuOCwxMjkuOQoJCXM4MC44LDUzLjgsMTI5LjksNTMuOHM5NS4yLTE5LjEsMTI5LjktNTMuOGMxNi4zLTE2LjMsMjkuMy0zNS4zLDM4LjQtNTUuOGMxLjEtMi4yLDItNC42LDIuOS03YzguMy0yMSwxMi42LTQzLjcsMTIuNi02NwoJCWMwLTEyLjMtMS4yLTI0LTMuNi0zNS44QzQzMC4yLDIxMy43LDQyOS44LDIxMi4yLDQyOS43LDIxMS44eiBNMzY2LDEyNy45YzEsMSwyLjEsMiwzLjIsMy4xYzE2LjIsMTYuMiwyOC44LDM1LjIsMzcuMSw1NS44CgkJYzAuOCwyLTAuOSw0LjMtMy4yLDMuOWMtNC44LTAuOS0xMC4zLTEuMi0xNi4zLTEuMWMtNC4yLDAuMS03LjktMi45LTguNi02LjljLTMuMy0xOC40LTguMS0zNS4zLTE0LjEtNTAuMWMtMC4zLTAuOC0wLjctMS42LTEtMi42CgkJQzM2Mi4zLDEyOC4xLDM2NC42LDEyNi40LDM2NiwxMjcuOXogTTM4My41LDIzNS42YzAtMS45LDIuNC0yLjgsMy42LTEuMmMxLjMsMS45LDIuNywzLjksNCw1LjhjMS43LDIuNiwzLjMsNS4yLDQuNyw3LjgKCQljMC45LDEuNiwwLjcsMy42LTAuNSw1Yy0xLjksMi4xLTQuMSw0LjQtNi40LDYuN2MtMC44LDAuOC0xLjcsMS43LTIuNiwyLjZjLTEuMSwxLTMsMC4yLTIuOS0xLjJjMC4xLTIuOCwwLjItNS41LDAuMi04LjQKCQlDMzgzLjcsMjQ2LjgsMzgzLjcsMjQxLjIsMzgzLjUsMjM1LjZ6IE0xNTIuMiwxMTIuOGMyOC40LTIwLjMsNjIuMi0zMS4yLDk3LjgtMzEuMmM5LjQsMCwxOC43LDAuOCwyNy44LDIuMmMyLjQsMC40LDMuMywzLjUsMS4zLDUKCQljLTguOCw2LjktMTYuOSwxNy4xLTI0LjIsMzAuM2MtMS43LDMuMy01LjUsNC44LTkuMSwzLjhjLTI0LTYuNy00Ny42LTkuOS02OS40LTkuMmMtOC4xLDAuMy0xNS42LDEuMS0yMi44LDIuNAoJCUMxNTEuNiwxMTYuNiwxNTAuNiwxMTQsMTUyLjIsMTEyLjh6IE0xMjguMiwzNjQuNWMtMy42LTYuNiwxLTIyLjEsMjQuMy00NS43bDAsMGMyLjQtMi40LDIuMi02LjQtMC41LTguNgoJCWMtMC45LTAuNy0xLjgtMS40LTIuOC0yLjJjLTIuMy0xLjgtNS43LTEuNy03LjgsMC40Yy0wLjUsMC41LTAuOCwwLjgtMC45LDAuOWMtMTEuNiwxMS45LTE5LjgsMjMtMjQuMywzMwoJCWMtMS4zLDIuOS01LjIsMy4yLTYuOSwwLjVjLTE4LjEtMjcuMi0yNy44LTU5LjItMjcuOC05Mi43YzAtMTEuOSwxLjItMjMuOCwzLjctMzUuMmMwLjQtMS43LDIuOC0xLjgsMy40LTAuMQoJCWMzLjUsMTEuNSw5LjIsMjMuNSwxNywzNS41YzEwLjYsMTYuMiwyNC41LDMxLjgsNDEuMSw0Ni4ybDAsMGM1LjYsNC45LDExLjYsOS42LDE3LjksMTQuMmMxMi43LDkuMywyNi4zLDE3LjgsNDAuOSwyNS4zCgkJYzYuNCwzLjQsMTIuOCw2LjUsMTkuMiw5LjVjMy42LDEuNiw3LjcsMS43LDExLjMsMC4zYzMuMS0xLjIsNi4xLTIuNCw5LjItMy43YzMuNC0xLjQsNS4yLTUsNC4zLTguNmMtMC4xLTAuNC0wLjItMC44LTAuMi0xCgkJYy01LjEtMjEuMy03LjktNDUuNC04LjMtNzAuNWwwLDBjMC0wLjMsMC02LDAtMTEuOXMwLjItOC42LDAuNC0xMi45bDAsMGMxLjUtMzAuNCw2LjctNTguOSwxNC45LTgzYzAuNy0yLjItMC40LTQuNi0yLjctNS40CgkJYy0yLjEtMC43LTQuMy0xLjQtNi41LTIuMWMtMi4xLTAuNy00LjUsMC41LTUuMywyLjdjLTguOSwyNi4xLTE0LjQsNTctMTUuOCw4OS43Yy0wLjIsNC4yLTIuNCw4LTYsMTAuMQoJCWMtMTkuNCwxMS41LTM3LjEsMjMuNy01Mi42LDM1LjljLTMuMiwyLjYtNy44LDIuNC0xMC45LTAuMmMtMTUuNC0xMy40LTI4LjQtMjcuOS0zOC4yLTQzYy0xOS4zLTI5LjYtMjMuOS01Ny40LTEyLjktNzguNWwwLjEtMC4xCgkJYzEuNC0yLjMsMi45LTQuNiw0LjQtNi44YzEyLjYtMTYuNiwzNi0yNi4zLDY3LjEtMjcuNGMxLjktMC4xLDQtMC4xLDUuOS0wLjFjMTkuMSwwLDM5LjUsMy4yLDYwLjMsOS4ybDAsMGMwLjQsMC4xLDMuNCwxLDQsMS4yCgkJYzUuMywxLjcsMTQuMyw0LjgsMTUuNSw1LjJjMC41LDAuMiwzLjMsMS4zLDMuNywxLjRsMCwwYzEwLjIsNCwyMC4zLDguNSwzMC4zLDEzLjdjMTkuNCwxMC4xLDM3LjEsMjEuOSw1Mi43LDM0LjkKCQljLTI5LjUsNi43LTYzLjgsMTkuOC05OC4zLDM3LjNjLTEuNiwwLjgtMi43LDIuNC0yLjgsNC4yYy0wLjEsMi4xLTAuMyw2LjQtMC40LDkuOWMtMC4xLDIuMSwyLjIsMy42LDQuMSwyLjZsMCwwCgkJYzM0LjItMTgsNjguMy0zMS4zLDk3LjYtMzguNWM1LjUtMS4zLDktNi41LDguMy0xMi4xYy0wLjUtMy45LTEuMS03LjgtMS44LTExLjVjLTAuOC00LjctMy41LTktNy4yLTExLjgKCQljLTEzLjctMTAuNC0yOC44LTIwLTQ1LTI4LjVjLTEwLjktNS43LTIxLjktMTAuNi0zMy4xLTE0LjljLTIuMy0wLjktMy40LTMuNy0yLjEtNS45YzExLjQtMjAuNCwyNS0zMS44LDM4LjMtMzEuOAoJCWMwLjEsMCwwLjMsMCwwLjQsMGMxNS42LDAuMywzMS4xLDE2LjUsNDIuNyw0NC42YzUuOCwxNC4yLDEwLjMsMzAuNiwxMy41LDQ4LjRsMCwwYzAuOSw1LDEuNiwxMC4xLDIuMiwxNS4zCgkJYzAuMywyLjcsMC44LDYuOCwxLjEsOC42YzEuMywxMy41LDEuOCwyNy42LDEuNiw0MS45Yy0wLjIsOS4xLTAuNiwxOC4xLTEuNCwyNi44Yy0yMC45LDE2LjgtNDYuNywzMy43LTc1LjEsNDguNwoJCWMtNy43LDQtMTUuNCw3LjktMjMsMTEuNWMtMS42LDAuOC04LjIsMy43LTguNiwzLjljLTcuMiwzLjMtMTQuMyw2LjItMjEuNCw5bDAsMGMtMC40LDAuMi04LjQsMy4yLTguOSwzLjQKCQljLTAuNiwwLjItNC43LDEuNy01LjIsMS45Yy0xNS4zLDUuNC0zMCw5LjUtNDMuNCwxMi4xQzE0Ny42LDM3Ni4yLDEzMS43LDM3MS4yLDEyOC4yLDM2NC41eiBNMTc0LjMsMjk5LjEKCQljMTQuOC0xMiwzMi4yLTI0LjIsNTEuMy0zNS42YzAuNCwyNC40LDMuMSw0Ny45LDcuOSw2OWMtNy0zLjEtMTQuMS02LjMtMjEuMS0xMEMxOTguOCwzMTUuNSwxODYsMzA3LjYsMTc0LjMsMjk5LjF6IE0yNzEuNyw0MTcuMQoJCWMtNy4xLDAuOS0xNC40LDEuNC0yMS43LDEuNGMtMzIuOCwwLTY0LjEtOS4zLTkwLjktMjYuNmMtMS44LTEuMi0xLTQuMSwxLjEtNC4yYzAuNCwwLDAuOSwwLDEuMi0wLjFjNi44LTAuNCwxNC4zLTEuNCwyMi40LTMKCQljMTcuMi0zLjQsMzYuNC05LDU2LjUtMTYuN2MxLjgtMC43LDMuOCwwLjIsNC42LDJsMCwwYzcuOCwxOSwxNy4zLDMzLjMsMjguMiw0Mi40QzI3NSw0MTMuOSwyNzQuMSw0MTYuOCwyNzEuNyw0MTcuMXogTTM0MywzNzIuMQoJCWMtMTIsMjMuNy0yNi44LDM2LjktNDEuMiwzNi42Yy0xNS42LTAuMy0zMS4xLTE2LjUtNDIuNy00NC42bDAsMGMtMC43LTEuNywwLjEtMy44LDEuOC00LjZjMC4xLTAuMSwwLjItMC4xLDAuNC0wLjIKCQljMC43LTAuMywxLjYtMC40LDIuNC0wLjJjMjEuNSw2LDQyLjgsOS4yLDYyLjcsOS4yYzIuMSwwLDQuMywwLDYuNC0wLjFjMi40LTAuMSw0LjktMC4yLDcuMy0wLjRDMzQyLjQsMzY3LjgsMzQ0LDM3MC4xLDM0MywzNzIuMXoKCQkgTTM0OC4yLDM1MS43Yy01LDAuNy0xMC4zLDEuMi0xNS44LDEuNGMtMTMuNSwwLjUtMjcuOC0wLjctNDIuNC0zLjRjLTEuOC0wLjMtMi4xLTIuOC0wLjUtMy42YzMuMi0xLjYsNi40LTMuMyw5LjYtNQoJCWMyMi40LTExLjksNDMuNC0yNC45LDYxLjctMzguMmMxLjMtMSwzLjMsMC4yLDMsMS44Yy0yLjYsMTUuMy02LDI5LjctMTAuNSw0Mi43QzM1Mi40LDM0OS44LDM1MC41LDM1MS40LDM0OC4yLDM1MS43egoJCSBNMzczLjEsMzY1LjFjLTEuMiwxLjMtMi42LDIuNy0zLjksNGMtMi4yLDIuMi00LjcsNC41LTcsNi42Yy0xLjUsMS4zLTMuOC0wLjMtMy0yLjFjMC4yLTAuNSwwLjUtMSwwLjctMS42YzEtMi4yLDEuOS00LjUsMy02LjgKCQljMC4yLTAuNSwwLjctMC45LDEuMi0xLjFjMi4zLTAuNiw0LjctMS4zLDYuOS0yQzM3MywzNjEuNSwzNzQuNCwzNjMuOCwzNzMuMSwzNjUuMXogTTQwNi45LDMxMS43Yy0wLjcsMS43LTEuMywzLjQtMi4xLDUuMQoJCWMtMC4yLDAuMy0xLjIsMi40LTEuMywyLjdjLTUuNiwxMC4zLTE0LjgsMTguNC0yNi44LDI0LjFjLTIuOCwxLjMtNS44LTEuMi01LTQuMmM0LjItMTQuOCw3LjItMzAuOCw5LjMtNDcuNwoJCWMwLjQtMy4yLDEuOS02LDQuMy04LjFjNS4xLTQuNCw5LjktOC45LDE0LjMtMTMuM2wwLDBjMi4xLTIuMSw1LjgtMS4yLDYuNywxLjdDNDEwLjYsMjg2LjUsNDEwLjksMzAwLDQwNi45LDMxMS43eiBNNDEwLjMsMjMyLjgKCQljLTEuMiwyLjItNC41LDIuMy01LjksMC4yYy0wLjItMC4zLTAuNC0wLjctMC42LTFjLTUtNy44LTEwLjgtMTUuMy0xNy4yLTIyLjdjLTEuNi0xLjgtMC4zLTQuNiwyLjEtNC43aDAuMQoJCWMxNS4xLDAsMjMsMy44LDI1LjQsOC4zQzQxNi4xLDIxNi43LDQxNS41LDIyMy40LDQxMC4zLDIzMi44eiBNNDE4LjUsMjU1YzAsMS4xLTEuNiwxLjQtMiwwLjRjLTAuMi0wLjQtMC40LTAuOS0wLjYtMS4zCgkJYy0wLjQtMC44LTAuMy0xLjgsMC4zLTIuNmMwLjEtMC4xLDAuMy0wLjQsMC42LTAuOGMwLjctMC45LDEuOC0wLjgsMS44LDAuMkM0MTguNSwyNTIuMyw0MTguNSwyNTMuNiw0MTguNSwyNTV6Ii8+CjwvZz4KPC9zdmc+Cg==" x="56" y="44" width="44" height="44"/>
+<text x="114" y="74" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" letter-spacing="5" fill="#b98bff">CELESTIA</text>
+<text x="54" y="146" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="-1" fill="#eef3fa">Consensus, validator</text>
+<text x="54" y="192" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="-1" fill="#b98bff">&amp; Fibre &#8212; one runbook.</text>
+<text x="56" y="232" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" fill="#9aa7bd">Mainnet Beta and Mocha testnet, side by side. Copy, paste, sign.</text>
+<g font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" letter-spacing="1.5">
+  <rect x="56" y="256" width="150" height="28" rx="14" fill="#7b2bf9" fill-opacity=".18" stroke="#b98bff" stroke-opacity=".5"/>
+  <text x="131" y="274" text-anchor="middle" fill="#d9c2ff">MAINNET &#183; celestia</text>
+  <rect x="216" y="256" width="150" height="28" rx="14" fill="#00b6fd" fill-opacity=".1" stroke="#00b6fd" stroke-opacity=".45"/>
+  <text x="291" y="274" text-anchor="middle" fill="#7fdcff">TESTNET &#183; mocha-5</text>
+</g>
+<!-- extended data square -->
+<text x="820" y="299" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#5d6b82">EXTENDED DATA SQUARE &#183; SAMPLING</text>
+  <rect x="820" y="34" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect class="smp" x="820" y="34" width="26" height="26" rx="5" style="animation-delay:2.84s"/>
+  <rect x="851" y="34" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="882" y="34" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect class="smp" x="882" y="34" width="26" height="26" rx="5" style="animation-delay:1.03s"/>
+  <rect x="913" y="34" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="944" y="34" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="944" y="34" width="26" height="26" rx="5" style="animation-delay:2.03s"/>
+  <rect x="975" y="34" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="975" y="34" width="26" height="26" rx="5" style="animation-delay:2.38s"/>
+  <rect x="1006" y="34" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1006" y="34" width="26" height="26" rx="5" style="animation-delay:1.17s"/>
+  <rect x="1037" y="34" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="820" y="65" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="851" y="65" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="882" y="65" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="913" y="65" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="944" y="65" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="975" y="65" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="65" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1037" y="65" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1037" y="65" width="26" height="26" rx="5" style="animation-delay:1.49s"/>
+  <rect x="820" y="96" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect class="smp" x="820" y="96" width="26" height="26" rx="5" style="animation-delay:4.32s"/>
+  <rect x="851" y="96" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect class="smp" x="851" y="96" width="26" height="26" rx="5" style="animation-delay:2.9s"/>
+  <rect x="882" y="96" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="913" y="96" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect class="smp" x="913" y="96" width="26" height="26" rx="5" style="animation-delay:1.36s"/>
+  <rect x="944" y="96" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="975" y="96" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="96" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1037" y="96" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="820" y="127" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="851" y="127" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="882" y="127" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="913" y="127" width="26" height="26" rx="5" fill="#3b1d7a"/>
+  <rect x="944" y="127" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="975" y="127" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="127" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1006" y="127" width="26" height="26" rx="5" style="animation-delay:4.68s"/>
+  <rect x="1037" y="127" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1037" y="127" width="26" height="26" rx="5" style="animation-delay:2.25s"/>
+  <rect x="820" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="820" y="158" width="26" height="26" rx="5" style="animation-delay:0.49s"/>
+  <rect x="851" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="882" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="882" y="158" width="26" height="26" rx="5" style="animation-delay:4.25s"/>
+  <rect x="913" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="944" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="975" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1006" y="158" width="26" height="26" rx="5" style="animation-delay:0.81s"/>
+  <rect x="1037" y="158" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1037" y="158" width="26" height="26" rx="5" style="animation-delay:1.01s"/>
+  <rect x="820" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="851" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="882" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="913" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="944" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="975" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1037" y="189" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="820" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="820" y="220" width="26" height="26" rx="5" style="animation-delay:2.38s"/>
+  <rect x="851" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="882" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="882" y="220" width="26" height="26" rx="5" style="animation-delay:0.88s"/>
+  <rect x="913" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="944" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="944" y="220" width="26" height="26" rx="5" style="animation-delay:5.5s"/>
+  <rect x="975" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1006" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="1037" y="220" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="820" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="851" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="851" y="251" width="26" height="26" rx="5" style="animation-delay:0.3s"/>
+  <rect x="882" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="913" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect x="944" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="944" y="251" width="26" height="26" rx="5" style="animation-delay:1.85s"/>
+  <rect x="975" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="975" y="251" width="26" height="26" rx="5" style="animation-delay:0.38s"/>
+  <rect x="1006" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+  <rect class="smp" x="1006" y="251" width="26" height="26" rx="5" style="animation-delay:2.38s"/>
+  <rect x="1037" y="251" width="26" height="26" rx="5" fill="#1a1f3d"/>
+
+<g clip-path="url(#sq)"><rect class="scan" x="820" y="34" width="243" height="40" fill="url(#scan)" opacity=".5"/></g>
+<line x1="941.5" y1="28" x2="941.5" y2="283" stroke="#b98bff" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<line x1="814" y1="155.5" x2="1069" y2="155.5" stroke="#b98bff" stroke-opacity=".35" stroke-dasharray="3 4"/>
+</svg>

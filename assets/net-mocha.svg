@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" role="img" aria-label="TESTNET mocha-5">
+<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.6" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="soft" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+  <clipPath id="lane"><rect x="30" y="140" width="540" height="42"/></clipPath>
+  <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#0a1020"/><stop offset=".12" stop-color="#0a1020" stop-opacity="0"/><stop offset=".88" stop-color="#0a1020" stop-opacity="0"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+</defs>
+<style>
+  .chain{animation:move 3s linear infinite}
+  @keyframes move{to{transform:translateX(-40px)}}
+  .go{animation:go 1.5s ease-in-out infinite}
+  @keyframes go{50%{transform:translateX(5px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect x=".5" y=".5" width="599" height="199" rx="20" fill="#0a1020" stroke="#7fdcff" stroke-opacity=".3"/>
+<text x="32" y="46" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" letter-spacing="3" fill="#7fdcff">TESTNET</text>
+<text x="31" y="96" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" letter-spacing="-1" fill="#eef3fa">mocha-5</text>
+<text x="33" y="124" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" fill="#9aa7bd" letter-spacing="1">app v10 &#183; Fibre live</text>
+<g>
+  <rect x="470" y="28" width="98" height="26" rx="13" fill="#3ddc97" fill-opacity=".1" stroke="#3ddc97" stroke-opacity=".4"/>
+  <circle cx="487" cy="41" r="4" fill="#3ddc97" filter="url(#glow)"><animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <text x="499" y="45.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="700" fill="#3ddc97" letter-spacing="1.5">LIVE</text>
+</g>
+<g class="go"><text x="568" y="124" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" letter-spacing="1.5" fill="#7fdcff">NETWORK PARAMS &#8594;</text></g>
+<g clip-path="url(#lane)">
+  <g class="chain">
+    <rect x="40" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.12" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="80" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.17" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="120" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.22" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="160" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.27" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="200" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.32" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="240" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.37" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="280" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.42" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="320" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.47" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="360" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.52" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="400" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.57" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="440" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.62" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="480" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.67" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="520" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.72" stroke="#7fdcff" stroke-opacity=".35"/>
+    <rect x="560" y="150" width="30" height="22" rx="5" fill="#00b6fd" fill-opacity="0.77" stroke="#7fdcff" stroke-opacity=".35"/>
+  </g>
+  <rect x="30" y="140" width="540" height="42" fill="url(#fadeR)"/>
+</g>
+</svg>
