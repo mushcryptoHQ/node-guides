@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" role="img" aria-label="Akash mainnet akashnet-2">
+<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.6" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+  <clipPath id="lane"><rect x="30" y="140" width="540" height="42"/></clipPath>
+  <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#0a1020"/><stop offset=".12" stop-color="#0a1020" stop-opacity="0"/><stop offset=".88" stop-color="#0a1020" stop-opacity="0"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+</defs>
+<style>
+  .chain{animation:move 3s linear infinite}
+  @keyframes move{to{transform:translateX(-40px)}}
+  .go{animation:go 1.5s ease-in-out infinite}
+  @keyframes go{50%{transform:translateX(5px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect x=".5" y=".5" width="599" height="199" rx="20" fill="#0a1020" stroke="#ff6b6b" stroke-opacity=".3"/>
+<image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgdmlld0JveD0iMCAwIDgwMCA4MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNMjc4LjIgNzdMNjMwLjYzNyA2ODZMNzQ4IDQ4Mi45NzdMNTEzLjEgNzdIMjc4LjJWNzdaIiBmaWxsPSIjRjM0QzJEIi8+DQo8cGF0aCBkPSJNMjc4LjIgNDk0LjZMNDAwLjA4NyA2ODZINjQzLjZMNTIxLjg4NyA0OTQuNkgyNzguMlY0OTQuNloiIGZpbGw9IiNCRTMxMkQiLz4NCjxwYXRoIGQ9Ik0xNzMuOCAyNjguNEw1MiA0NzcuMkwxNzMuODg3IDY4Nkw0MTcuNCAyNjguNEgxNzMuOFoiIGZpbGw9IiNGMzRDMkQiLz4NCjwvc3ZnPg0K" x="32" y="26" width="26" height="26"/>
+<text x="68" y="45" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" letter-spacing="3" fill="#ff6b6b">AKASH &#183; MAINNET</text>
+<text x="31" y="98" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="-1" fill="#eef3fa">akashnet-2</text>
+<text x="33" y="124" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" fill="#9aa7bd" letter-spacing="1">akash v2.1.0 &#183; cosmos-sdk v0.53</text>
+<g>
+  <rect x="470" y="28" width="98" height="26" rx="13" fill="#3ddc97" fill-opacity=".1" stroke="#3ddc97" stroke-opacity=".4"/>
+  <circle cx="487" cy="41" r="4" fill="#3ddc97" filter="url(#glow)"><animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <text x="499" y="45.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="700" fill="#3ddc97" letter-spacing="1.5">LIVE</text>
+</g>
+<g class="go"><text x="568" y="124" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" letter-spacing="1.5" fill="#ff6b6b">OPEN RUNBOOK &#8594;</text></g>
+<g clip-path="url(#lane)">
+  <g class="chain">
+    <rect x="40" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.08" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="80" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.12" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="120" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.17" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="160" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.22" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="200" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.26" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="240" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.3" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="280" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.35" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="320" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.4" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="360" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.44" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="400" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.48" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="440" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.53" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="480" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.57" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="520" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.62" stroke="#ff6b6b" stroke-opacity=".3"/>
+    <rect x="560" y="150" width="30" height="22" rx="5" fill="#ff6b6b" fill-opacity="0.66" stroke="#ff6b6b" stroke-opacity=".3"/>
+  </g>
+  <rect x="30" y="140" width="540" height="42" fill="url(#fadeR)"/>
+</g>
+</svg>
