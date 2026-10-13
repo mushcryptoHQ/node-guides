@@ -15,23 +15,21 @@
 
 ## 🍄 Networks
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🟣 <a href="./celestia/">Celestia</a></h3>
-      <b>Mainnet Beta</b> <code>celestia</code> · <b>Mocha</b> <code>mocha-5</code><br><br>
-      Consensus node · Validator · <b>Fibre server</b> · Upgrades · Monitoring · Cheat sheet<br><br>
-      <a href="./celestia/"><b>Open the Celestia runbook →</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🌱 Coming next</h3>
-      <b>Axelar</b> <code>axelar-dojo-1</code><br>
-      <b>Akash</b> <code>akashnet-2</code><br>
-      <b>Shentu</b> <code>shentu-2.2</code><br><br>
-      <sub>These guides grow from the same template as the networks we validate.</sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="./celestia/"><img src="./assets/net-mainnet.svg" width="49%" alt="Celestia — mainnet & Mocha"></a>
+  <a href="./axelar/"><img src="./assets/net-axelar.svg" width="49%" alt="Axelar — axelar-dojo-1"></a>
+  <a href="./akash/"><img src="./assets/net-akash.svg" width="49%" alt="Akash — akashnet-2"></a>
+  <a href="./shentu/"><img src="./assets/net-shentu.svg" width="49%" alt="Shentu — shentu-2.2"></a>
+</p>
+
+| Network | Chains | What's covered |
+|---|---|---|
+| 🟣 [**Celestia**](./celestia/) | `celestia` · `mocha-5` | Consensus node · Validator · **Fibre server** · Upgrades & signalling · Cheat sheet |
+| ⚪ [**Axelar**](./axelar/) | `axelar-dojo-1` | Full node · Validator · **tofnd + vald** · Broadcaster · **EVM chain maintainers** · Cheat sheet |
+| 🔴 [**Akash**](./akash/) | `akashnet-2` | Full node · Validator (`validator.json`) · Upgrades · Cheat sheet |
+| 🟠 [**Shentu**](./shentu/) | `shentu-2.2` | Full node · Validator (`validator.json`) · Upgrades · Cheat sheet |
+
+<sub>Axelar, Akash and Shentu guides cover <b>mainnet only</b>. Celestia covers both mainnet and the Mocha testnet.</sub>
 
 <br>
 
