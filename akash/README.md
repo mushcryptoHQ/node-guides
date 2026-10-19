@@ -3,7 +3,7 @@
 This is a runbook for **Akash mainnet** (`akashnet-2`). It takes you from a bare server to a signing validator.
 
 > [!NOTE]
-> Checked on **2026-10-13** against the official [`meta.json`](https://raw.githubusercontent.com/akash-network/net/main/mainnet/meta.json), the [Akash node docs](https://akash.network/docs/node-operators/) and live chain parameters.
+> Checked on **2026-10-19** against the official [`meta.json`](https://raw.githubusercontent.com/akash-network/net/main/mainnet/meta.json), the [Akash node docs](https://akash.network/docs/node-operators/) and live chain parameters.
 
 ## 🗺️ The path
 
