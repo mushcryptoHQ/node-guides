@@ -3,7 +3,7 @@
 This is a runbook for **Shentu mainnet** (`shentu-2.2`). It takes you from a bare server to a signing validator.
 
 > [!NOTE]
-> Checked on **2026-10-13** against [shentufoundation/shentu releases](https://github.com/shentufoundation/shentu/releases), the [mainnet repo](https://github.com/shentufoundation/mainnet) and live chain parameters (the network runs `v2.19.0`).
+> Checked on **2026-10-19** against [shentufoundation/shentu releases](https://github.com/shentufoundation/shentu/releases), the [mainnet repo](https://github.com/shentufoundation/mainnet) and live chain parameters (the network runs `v2.19.0`).
 
 ## 🗺️ The path
 
