@@ -146,7 +146,7 @@ celestia-appd tx distribution withdraw-rewards $VALOPER --commission \
 ```
 
 > [!IMPORTANT]
-> From **app version 10**, every bonded validator is expected to run a **Fibre server**. On Mocha that is already active, so continue straight to [step 05](./05-fibre.md). On mainnet, prepare it now and start it after activation.
+> From **app version 10**, every bonded validator is expected to run a **Fibre server**. On Mocha that is already active, so continue straight to [step 05](./05-fibre.md). On mainnet, v10 activates at height **15 116 658** (~2026-10-20). Have Fibre ready before then, and start and register it right after.
 
 > [!TIP]
 > Submit your node as a peer to the [`celestiaorg/networks`](https://github.com/celestiaorg/networks) repository so other operators can find you.

@@ -17,8 +17,8 @@ flowchart LR
 | | Mainnet `celestia` | Mocha `mocha-5` |
 |---|---|---|
 | Release | `v10.4.0` | `v10.4.0-mocha` |
-| App v10 | ⏳ After `x/signal` activation | ✅ Active |
-| What to do | **Prepare now.** Start and register after activation | Start and register now |
+| App v10 | ⏳ Signalling passed. Activates at height **15 116 658** (~2026-10-20 03:45 UTC) | ✅ Active |
+| What to do | Have everything ready **before** the height. Start and register once `app_version` = 10 | Start and register now |
 
 > [!IMPORTANT]
 > **Installing the v10 binary does not activate v10.** Prepare binaries and config beforehand. Start Fibre and run `set-host` **only after** `app_version` reports `10`.
