@@ -18,7 +18,7 @@
 <rect x=".5" y=".5" width="599" height="199" rx="20" fill="#0a1020" stroke="#b98bff" stroke-opacity=".3"/>
 <text x="32" y="46" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" letter-spacing="3" fill="#b98bff">MAINNET BETA</text>
 <text x="31" y="96" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" letter-spacing="-1" fill="#eef3fa">celestia</text>
-<text x="33" y="124" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" fill="#9aa7bd" letter-spacing="1">app v10 &#183; Fibre after activation</text>
+<text x="33" y="124" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="12" fill="#9aa7bd" letter-spacing="1">app v10 &#183; Fibre live</text>
 <g>
   <rect x="470" y="28" width="98" height="26" rx="13" fill="#3ddc97" fill-opacity=".1" stroke="#3ddc97" stroke-opacity=".4"/>
   <circle cx="487" cy="41" r="4" fill="#3ddc97" filter="url(#glow)"><animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
