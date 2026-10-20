@@ -17,11 +17,11 @@ flowchart LR
 | | Mainnet `celestia` | Mocha `mocha-5` |
 |---|---|---|
 | Release | `v10.4.0` | `v10.4.0-mocha` |
-| App v10 | ⏳ Signalling passed. Activates at height **15 116 658** (~2026-10-20 03:45 UTC) | ✅ Active |
-| What to do | Have everything ready **before** the height. Start and register once `app_version` = 10 | Start and register now |
+| App v10 | ✅ Active since height **15 116 658** (2026-10-20 03:45 UTC) | ✅ Active since height 1 082 619 (2026-09-24) |
+| What to do | **Start and register now.** Every bonded validator is expected to run Fibre | Start and register now |
 
 > [!IMPORTANT]
-> **Installing the v10 binary does not activate v10.** Prepare binaries and config beforehand. Start Fibre and run `set-host` **only after** `app_version` reports `10`.
+> App v10 is **active on both networks**, so Fibre is now part of running a bonded validator. If your node still runs an older binary, it has stopped at the upgrade height. Install `v10.4.0` / `v10.4.0-mocha` first ([step 02](./02-install-celestia-app.md)) and confirm `app_version` = `10` below before you start Fibre.
 
 ```bash
 source $HOME/.celestia-env
@@ -83,13 +83,13 @@ Optionally, preview the config sync that v10 provides:
 celestia-appd config sync --home $CELESTIA_HOME --fibre-home $FIBRE_HOME --dry-run
 ```
 
-## 3. Wait for activation
+## 3. Confirm app v10
 
 ```bash
 curl -s http://127.0.0.1:26657/abci_info | jq -r '.result.response.app_version'
 ```
 
-Continue only when this prints **`10`** or higher. The installed binary version does not prove that v10 is active.
+It should print **`10`** on both networks. If it doesn't, your node isn't synced yet or is running the wrong binary, so fix that before you continue.
 
 ## 4. systemd service
 

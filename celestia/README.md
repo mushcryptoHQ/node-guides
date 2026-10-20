@@ -8,7 +8,7 @@
 This is a complete runbook for **Celestia consensus operators**. It covers everything from a bare server to a signing validator with a registered Fibre server. Every guide works on both networks: you set `CHAIN_ID` once and copy-paste the rest.
 
 > [!NOTE]
-> Versions were checked on **2026-10-19** against the [official Celestia docs](https://docs.celestia.org) and the [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases).
+> Versions were checked on **2026-10-20** against the [official Celestia docs](https://docs.celestia.org) and the [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases).
 
 <br>
 
@@ -34,9 +34,9 @@ This is a complete runbook for **Celestia consensus operators**. It covers every
 | | |
 |---|---|
 | Chain ID | `celestia` |
-| celestia-app | **`v10.4.0`** (the multiplexer embeds v9.0.8 and switches to v10 at activation) |
+| celestia-app | **`v10.4.0`** (multiplexer) |
 | celestia-node | `v0.34.3` |
-| App version 10 / Fibre | Signalling passed (≥ 5/6). Upgrade height **15 116 658** (~2026-10-20 03:45 UTC). Check it with `curl -s localhost:26657/abci_info` |
+| App version 10 / Fibre | ✅ **Active** since height **15 116 658** (2026-10-20 03:45 UTC). Bonded validators run a [Fibre server](./05-fibre.md) |
 | Genesis hash | `6BE39EFD10BA412A9DB5288488303F5DD32CF386707A5BEF33617F4C43301872` |
 | Genesis / peers | [`networks/celestia`](https://github.com/celestiaorg/networks/tree/main/celestia) |
 | Validators | 100 |

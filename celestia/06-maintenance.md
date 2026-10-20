@@ -69,7 +69,7 @@ curl -s localhost:26657/abci_info | jq -r '.result.response.app_version'
 | Network | App v10 |
 |---|---|
 | `mocha-5` | ✅ Activated at block **1082619** (2026-09-24 20:20 UTC) |
-| `celestia` | ⏳ Signalling passed, upgrade scheduled at height **15 116 658** (~2026-10-20 03:45 UTC). Verify with `query signal upgrade` |
+| `celestia` | ✅ Activated at height **15 116 658** (2026-10-20 03:45 UTC) |
 
 Follow [status.celestia.org](https://status.celestia.org) for announcements. Celestia also maintains an [upgrade monitor](https://docs.celestia.org/operate/consensus-validators/upgrade-monitor/).
 
