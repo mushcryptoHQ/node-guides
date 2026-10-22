@@ -13,7 +13,7 @@ source $HOME/.celestia-env
 Celestia ships **multiplexer** builds, so the same binary carries old and new app versions and switches at activation. A routine upgrade is a binary swap:
 
 ```bash
-NEW=v10.4.0          # or v10.4.0-mocha, etc. Always read the release notes first
+NEW=v10.5.0          # or v10.5.0-mocha, etc. Always read the release notes first
 ARCH=$(uname -m); [ "$ARCH" = "aarch64" ] && ARCH=arm64
 cd $HOME
 curl -fLO "https://github.com/celestiaorg/celestia-app/releases/download/$NEW/celestia-app_Linux_${ARCH}.tar.gz"
@@ -28,7 +28,17 @@ celestia-appd version
 sed -i "s|^export APP_VERSION=.*|export APP_VERSION=$NEW|" $HOME/.celestia-env
 ```
 
-Validators also replace `fibre` from the **same release** and restart `fibre.service`.
+Validators also replace `fibre` from the **same release** and restart it:
+
+```bash
+curl -fLO "https://github.com/celestiaorg/celestia-app/releases/download/$NEW/fibre_Linux_${ARCH}.tar.gz"
+sha256sum --ignore-missing --check checksums.txt && tar -xzf fibre_Linux_${ARCH}.tar.gz
+sudo systemctl stop fibre
+sudo install -m 0755 fibre /usr/local/bin/fibre
+sudo systemctl start fibre
+fibre version
+grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify     # → SERVING
+```
 
 After a major release, review new config fields:
 
@@ -38,6 +48,16 @@ celestia-appd config sync --home $CELESTIA_HOME --fibre-home $FIBRE_HOME
 ```
 
 `config sync` backs up the files first, keeps your existing values and **does not touch `app.toml`**.
+
+### Release log
+
+| Release | Date | Type | What operators do |
+|---|---|---|---|
+| **`v10.5.0`** / **`v10.5.0-mocha`** | 2026-10-22 / 2026-10-21 | Minor, **non-consensus-breaking**. No height, so roll it out at any time | Swap `celestia-appd` **and** `fibre`, then run `config sync` (adds Fibre `[health]`). Object storage endpoints must be `https://`. See [Fibre step 6](./05-fibre.md#6-health-checks-v1050) |
+| `v10.4.0` / `v10.4.0-mocha` | 2026-10-07 / 2026-10-01 | Introduced app v10 + Fibre, activated by `x/signal` | Install the multiplexer, signal, then start and register Fibre after activation |
+
+> [!TIP]
+> For a non-consensus-breaking release, upgrade one node at a time (sentries and RPC nodes first, then the validator). Stopping the validator for a binary swap takes seconds and won't get you jailed.
 
 ## 🗳️ Signalling an app version upgrade
 
@@ -88,7 +108,9 @@ curl -s localhost:26660/metrics | grep -E "^cometbft_consensus_height |^cometbft
 | Low peers | `cometbft_p2p_peers` | < 10 |
 | Slow signing (Fibre) | `cometbft_privval_signing_latency_*` | median > 10 ms |
 | Jailed | `q staking validator $VALOPER` → `jailed: true` | immediately |
-| Fibre down | `systemctl is-active fibre`, `:7980` reachability | 1 min |
+| Fibre down | `grpc_health_probe … -service=fibre-liveness` (exit ≠ 0) | 1 min |
+| Fibre not ready | `grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify` (exit ≠ 0). The log gives the reason | 2 min |
+| Fibre unreachable | `:7980` from **outside** your network | 2 min |
 | Disk | free space on both disks | < 15% |
 | Upgrade pending | `query signal upgrade` | new height appears |
 

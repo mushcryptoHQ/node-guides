@@ -16,12 +16,12 @@ flowchart LR
 
 | | Mainnet `celestia` | Mocha `mocha-5` |
 |---|---|---|
-| Release | `v10.4.0` | `v10.4.0-mocha` |
+| Release | `v10.5.0` | `v10.5.0-mocha` |
 | App v10 | ✅ Active since height **15 116 658** (2026-10-20 03:45 UTC) | ✅ Active since height 1 082 619 (2026-09-24) |
 | What to do | **Start and register now.** Every bonded validator is expected to run Fibre | Start and register now |
 
 > [!IMPORTANT]
-> App v10 is **active on both networks**, so Fibre is now part of running a bonded validator. If your node still runs an older binary, it has stopped at the upgrade height. Install `v10.4.0` / `v10.4.0-mocha` first ([step 02](./02-install-celestia-app.md)) and confirm `app_version` = `10` below before you start Fibre.
+> App v10 is **active on both networks**, so Fibre is now part of running a bonded validator. If your node still runs an older binary, it has stopped at the upgrade height. Install `v10.5.0` / `v10.5.0-mocha` first ([step 02](./02-install-celestia-app.md)) and confirm `app_version` = `10` below before you start Fibre.
 
 ```bash
 source $HOME/.celestia-env
@@ -69,7 +69,7 @@ sudo install -m 0755 build/fibre /usr/local/bin/fibre
 </details>
 
 > [!NOTE]
-> On mainnet, check the asset names on the [v10.4.0 release page](https://github.com/celestiaorg/celestia-app/releases/tag/v10.4.0). The archive pattern above is the one the Mocha docs use.
+> Mainnet and Mocha releases ship the same asset names: `fibre_Linux_x86_64.tar.gz` and `fibre_Linux_arm64.tar.gz`, plus `checksums.txt` ([v10.5.0](https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0) · [v10.5.0-mocha](https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0-mocha)).
 
 Prepare the data directory on the dedicated disk:
 
@@ -134,6 +134,8 @@ max_concurrent_streams = 13
 
 Memory ≈ `max_connections × max_concurrent_streams × 132 MiB`. A single upload can take all 16 default slots and block downloads. If you raise `max_connections`, recompute the RAM you need.
 
+Since `v10.5.0`, idle connections close after **30 s** on the server and **20 s** on the client (previously 5 min). Clients reconnect on their next request, so custom clients must tolerate this.
+
 ## 5. Register on-chain
 
 Do this only once `<public_host>:7980` is reachable from the outside:
@@ -154,7 +156,60 @@ celestia-appd query valaddr providers
 > [!NOTE]
 > The registration persists. Run `set-host` again only if the address changes. The entry is **removed** if your validator leaves the active set, or stays jailed or unbonded for **more than 7 days**. Unregistered servers get no Fibre traffic.
 
-## 6. Transport security
+## 6. Health checks *(v10.5.0+)*
+
+Fibre serves the standard **gRPC health service** on its client port `7980`:
+
+| Probe | Service name | Means |
+|---|---|---|
+| **Liveness** | `fibre-liveness` | The process is running and answering |
+| **Readiness** | `""` (default) or `celestia.fibre.v1.Fibre` | Startup finished and **all** checks pass, so it can accept new uploads |
+
+Install [`grpc_health_probe`](https://github.com/grpc-ecosystem/grpc-health-probe/releases) once:
+
+```bash
+cd $HOME
+ARCH=$(uname -m); [ "$ARCH" = "x86_64" ] && ARCH=amd64; [ "$ARCH" = "aarch64" ] && ARCH=arm64
+curl -fLo grpc_health_probe "https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.60/grpc_health_probe-linux-${ARCH}"
+sudo install -m 0755 grpc_health_probe /usr/local/bin/ && rm grpc_health_probe
+```
+
+The port is TLS with a self-signed identity certificate, so skip verification:
+
+```bash
+grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify                          # readiness
+grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify -service=fibre-liveness   # liveness
+```
+
+The probe exits `0` on `SERVING`, so you can wire it straight into your monitoring. When the server is **not ready**, the log names the failing check and what to do:
+
+```text
+WARN health check failed check=registration reason=provider_not_registered message="Register a Fibre provider host for validator celestiavalcons1... ..."
+WARN server not ready failed_checks=[registration]
+```
+
+| Check | Fails when | Reason codes |
+|---|---|---|
+| `app` | The node is unreachable or syncing, its last block is older than `max_block_age`, or the chain ID changed | `app_unreachable`, `app_syncing`, `chain_stalled`, `chain_id_mismatch` |
+| `fibre_module` | The node has no Fibre module (wrong gRPC port or network) | `fibre_module_unavailable` |
+| `signer` | The signer is unreachable, or returns a different key than at startup | `signer_unreachable`, `signer_key_changed` |
+| `validator` | The validator is not in the active set | `validator_not_active` |
+| `registration` | No provider registered, or an invalid `host:port` | `provider_not_registered`, `provider_host_invalid` |
+| `store` | A test write or read on the metadata store fails | `store_failed` |
+
+Readiness only gates **new uploads and discovery**. Downloads of stored shards keep working while the node or signer is down. The `signer` check proves the signer is reachable, not that signing works.
+
+The settings live in a new `[health]` table. The defaults apply when the table is absent, and `celestia-appd config sync` adds it for you:
+
+```toml
+# $FIBRE_HOME/config/server_config.toml
+[health]
+check_interval = "10s"
+probe_timeout  = "3s"
+max_block_age  = "2m"
+```
+
+## 7. Transport security
 
 | Connection | Security |
 |---|---|
@@ -181,9 +236,12 @@ The node side needs a server certificate, its key and the client CA. See the [pr
 > `--privval-grpc-allow-insecure` (node) and `--signer-grpc-allow-insecure` (Fibre) are for **local development only**. With them set, anyone who can reach the signer can get signatures from your validator key.
 </details>
 
-## 7. Object storage *(optional)*
+## 8. Object storage *(optional)*
 
-Fibre can keep shards in S3-compatible storage (S3, R2) instead of the local disk. This needs `v10.4.0+`. Put the bucket in the same region as the host.
+Fibre can keep shards in S3-compatible storage (S3, R2) instead of the local disk. Put the bucket in the same region as the host.
+
+> [!IMPORTANT]
+> Since **v10.5.0**, `endpoint` **must be `https://`**. A plaintext `http://` endpoint fails validation, and Fibre refuses to start. At startup Fibre also checks that the bucket is **reachable with the configured credentials**. Review these settings before you restart on the new binary.
 
 ```toml
 # $FIBRE_HOME/config/server_config.toml
@@ -215,7 +273,7 @@ The IAM permissions needed are `s3:GetObject`, `s3:PutObject`, `s3:DeleteObject`
 > [!WARNING]
 > Switching backends affects **new shards only**. Keep access to the old backend until its shards are pruned. If you change the endpoint, bucket, prefix, chain ID or validator, Fibre fails with `object namespace mismatch`. To migrate, stop Fibre, copy the objects with the same key layout, update the config, start once with `--override-object-namespace`, then remove the flag and restart.
 
-## 8. Metrics
+## 9. Metrics
 
 Fibre exports OTLP metrics to a collector such as Grafana Alloy or the OpenTelemetry Collector:
 
@@ -235,10 +293,14 @@ Fibre exports OTLP metrics to a collector such as Grafana Alloy or the OpenTelem
 > [!TIP]
 > The reference Docker Compose monitoring stack publishes Prometheus on **9090**, which collides with application gRPC. Remap it, for example to `9091:9090`. The release includes a Fibre Grafana dashboard, which expects a Prometheus data source with UID `prometheus`.
 
-## 9. Troubleshooting
+## 10. Troubleshooting
+
+Start with `grpc_health_probe` and `journalctl -u fibre | grep "health check failed"`. The reason code usually tells you exactly what's wrong (see [step 6](#6-health-checks-v1050)).
 
 | Symptom | Fix |
 |---|---|
+| Fibre won't start: object storage endpoint invalid | Since v10.5.0, `object_storage.endpoint` must be `https://` |
+| Fibre won't start: bucket unreachable | Check the bucket name, region, credentials and IAM permissions. v10.5.0 verifies them at startup |
 | `unknown service cosmos.base.tendermint.v1beta1.Service` | Fibre is pointed at the wrong gRPC, or v10 isn't active yet |
 | Missing Fibre / valaddr services | App v10 not active yet. Check `abci_info` |
 | App gRPC connection refused | Enable `[grpc]` in `app.toml` and restart celestia-appd |
@@ -250,7 +312,7 @@ Fibre exports OTLP metrics to a collector such as Grafana Alloy or the OpenTelem
 | Unknown field error | Remove the reported key from `server_config.toml` |
 | `loading object storage credentials` | The env file or systemd drop-in is missing or wrong |
 
-<sub>Sources: <a href="https://docs.celestia.org/operate/consensus-validators/fibre/">Run a Fibre server</a> · <a href="https://docs.celestia.org/operate/consensus-validators/fibre/metrics/">Fibre metrics</a> · <a href="https://github.com/celestiaorg/celestia-app/releases/tag/v10.4.0">v10.4.0 release notes</a></sub>
+<sub>Sources: <a href="https://docs.celestia.org/operate/consensus-validators/fibre/">Run a Fibre server</a> · <a href="https://docs.celestia.org/operate/consensus-validators/fibre/metrics/">Fibre metrics</a> · <a href="https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0">v10.5.0 release notes</a> · <a href="https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md#health">Fibre health guide</a></sub>
 
 ---
 

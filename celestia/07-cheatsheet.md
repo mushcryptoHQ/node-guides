@@ -70,6 +70,11 @@ celestia-appd tx valaddr set-host <public_host>:7980 --from $WALLET \
 
 nc -vz <public_host> 7980          # run from another machine
 fibre version
+
+# health (v10.5.0+): exit 0 = SERVING
+grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify                          # readiness
+grpc_health_probe -addr=127.0.0.1:7980 -tls -tls-no-verify -service=fibre-liveness   # liveness
+journalctl -u fibre -o cat | grep -E "health check failed|server not ready" | tail
 ```
 
 ## 🗳️ Governance & upgrades
