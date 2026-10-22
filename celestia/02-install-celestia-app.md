@@ -4,7 +4,7 @@
 
 ---
 
-`celestia-appd` ships as a **multiplexer**: one binary that embeds older app versions and switches to the new one automatically when an upgrade activates. On mainnet, `v10.4.0` embeds `v9.0.8` and flips to v10 at activation.
+`celestia-appd` ships as a **multiplexer**: one binary that embeds older app versions and switches to the new one automatically when an upgrade activates. The v10 multiplexer still embeds the older app versions (e.g. v9.0.8), so a node can replay history from before the v10 activation at height 15 116 658.
 
 > [!WARNING]
 > For the v9 → v10 transition, **do not** use the `celestia-app-standalone` build and **do not** use Cosmovisor. The multiplexer handles the switch itself.
