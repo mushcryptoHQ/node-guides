@@ -46,7 +46,7 @@ sudo apt install -y curl wget tar aria2 lz4 jq git make clang pkg-config \
 <summary><b>Go toolchain</b> (only needed to build from source)</summary>
 <br>
 
-celestia-app `v10.4.0` builds with **Go 1.26.6**. Check the release notes when you upgrade.
+celestia-app `v10.5.0` builds with **Go 1.26.6**. Check the release notes when you upgrade.
 
 ```bash
 GO_VERSION=1.26.6
@@ -120,7 +120,7 @@ Every later step reads these variables. Create the file **once**, choosing **one
 ```bash
 cat > $HOME/.celestia-env <<'EOF'
 export CHAIN_ID=celestia
-export APP_VERSION=v10.4.0
+export APP_VERSION=v10.5.0
 export KEYRING_BACKEND=file
 export MONIKER="your-moniker"
 export WALLET=validator
@@ -135,7 +135,7 @@ EOF
 ```bash
 cat > $HOME/.celestia-env <<'EOF'
 export CHAIN_ID=mocha-5
-export APP_VERSION=v10.4.0-mocha
+export APP_VERSION=v10.5.0-mocha
 export KEYRING_BACKEND=test
 export MONIKER="your-moniker"
 export WALLET=validator
@@ -160,3 +160,4 @@ echo "$CHAIN_ID / $APP_VERSION"
 ---
 
 [← Celestia hub](./README.md) · **01 Requirements** · [02 Install →](./02-install-celestia-app.md)
+
