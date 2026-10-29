@@ -8,7 +8,7 @@
 This is a complete runbook for **Celestia consensus operators**. It covers everything from a bare server to a signing validator with a registered Fibre server. Every guide works on both networks: you set `CHAIN_ID` once and copy-paste the rest.
 
 > [!NOTE]
-> Versions were checked on **2026-10-22** against the [official Celestia docs](https://docs.celestia.org) and the [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases).
+> Versions were checked on **2026-10-29** against the [official Celestia docs](https://docs.celestia.org) and the [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases).
 
 <br>
 
@@ -35,7 +35,7 @@ This is a complete runbook for **Celestia consensus operators**. It covers every
 |---|---|
 | Chain ID | `celestia` |
 | celestia-app | **`v10.5.0`** (multiplexer. Minor, non-consensus-breaking update over v10.4.0) |
-| celestia-node | `v0.34.3` |
+| celestia-node | `v0.34.4` |
 | App version 10 / Fibre | ✅ **Active** since height **15 116 658** (2026-10-20 03:45 UTC). Bonded validators run a [Fibre server](./05-fibre.md) |
 | Genesis hash | `6BE39EFD10BA412A9DB5288488303F5DD32CF386707A5BEF33617F4C43301872` |
 | Genesis / peers | [`networks/celestia`](https://github.com/celestiaorg/networks/tree/main/celestia) |
@@ -65,7 +65,7 @@ The full list is in the [official docs](https://docs.celestia.org/operate/networ
 |---|---|
 | Chain ID | `mocha-5` (a new chain that started at height 1. It is a hard spoon of mocha-4 at block 13205115, so balances carried over but validators did not) |
 | celestia-app | **`v10.5.0-mocha`** (minor, non-consensus-breaking update over v10.4.0-mocha) |
-| celestia-node | `v0.34.3-mocha` |
+| celestia-node | `v0.34.4-mocha` |
 | App version 10 / Fibre | ✅ Active |
 | Genesis hash | `82DB3AC5AB8485E4784054BD10457533A64563F055C0D234A3134603A9C85D33` |
 | Genesis / seeds / peers | [`networks/mocha-5`](https://github.com/celestiaorg/networks/tree/main/mocha-5) |
@@ -93,3 +93,4 @@ The full list is in the [official docs](https://docs.celestia.org/operate/networ
 <p align="center"><a href="./01-requirements.md"><b>Start with step 01: Requirements →</b></a></p>
 
 <img src="../assets/footer.svg" width="100%" alt="Infrastructure, unseen.">
+
