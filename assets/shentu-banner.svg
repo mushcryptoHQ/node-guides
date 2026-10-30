@@ -17,7 +17,7 @@
 <text x="56" y="236" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" fill="#9aa7bd">Full node and validator for the network of on-chain audits and OpenMath.</text>
 <g font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" letter-spacing="1.5">
   <rect x="56" y="256" width="273" height="28" rx="14" fill="#e8ac4c" fill-opacity=".1" stroke="#e8ac4c" stroke-opacity=".45"/>
-  <text x="74" y="274" fill="#e8ac4c">shentud v2.19.0 &#183; cosmos-sdk v0.53</text>
+  <text x="74" y="274" fill="#e8ac4c">shentud v2.20.0 &#183; cosmos-sdk v0.53</text>
 </g>
 <path d="M960 50 L1052 82 V150 C1052 214 1012 250 960 268 C908 250 868 214 868 150 V82 Z" fill="#e8ac4c" fill-opacity=".06" stroke="#e8ac4c" stroke-opacity=".6" stroke-width="2"/>
 <clipPath id="sh"><path d="M960 50 L1052 82 V150 C1052 214 1012 250 960 268 C908 250 868 214 868 150 V82 Z"/></clipPath>
