@@ -31,7 +31,7 @@ sudo apt install -y curl wget jq lz4 git make build-essential ufw
 ```bash
 cat > $HOME/.shentu-env <<'EOF'
 export CHAIN_ID=shentu-2.2
-export SHENTU_VERSION=v2.19.0
+export SHENTU_VERSION=v2.20.0
 export MONIKER="your-moniker"
 export WALLET=validator
 export KEYRING_BACKEND=file
@@ -53,7 +53,7 @@ cd $HOME
 V=${SHENTU_VERSION#v}
 curl -fLo shentud "https://github.com/shentufoundation/shentu/releases/download/$SHENTU_VERSION/shentud_${V}_linux_amd64"
 sudo install -m 0755 shentud /usr/local/bin/shentud && rm shentud
-shentud version          # → 2.19.0 (or v2.19.0)
+shentud version          # → 2.20.0 (or v2.20.0)
 ```
 
 The releases page publishes no checksum file. If you need a verifiable build, use option B.

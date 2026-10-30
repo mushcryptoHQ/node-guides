@@ -114,7 +114,7 @@ journalctl -u shentud -f -o cat
 
 ```bash
 curl -s localhost:26657/status | jq '.result.sync_info | {latest_block_height, catching_up}'
-curl -s localhost:26657/abci_info | jq -r '.result.response.version'     # → v2.19.0
+curl -s localhost:26657/abci_info | jq -r '.result.response.version'     # → v2.20.0
 ```
 
 ---

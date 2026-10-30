@@ -14,6 +14,7 @@ Shentu ships **mandatory upgrades** through governance. Each [release](https://g
 
 | Version | Height | When |
 |---|---|---|
+| **v2.20.0** | 31 812 210 | 2026-10-29 |
 | v2.19.0 | 31 150 500 | ~2026-09-15 |
 | v2.18.0 | 29 367 500 | ~2026-05-19 |
 | v2.17.0 | 28 124 200 | ~2026-02-25 |
