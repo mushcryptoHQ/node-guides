@@ -13,7 +13,7 @@ source $HOME/.celestia-env
 Celestia ships **multiplexer** builds, so the same binary carries old and new app versions and switches at activation. A routine upgrade is a binary swap:
 
 ```bash
-NEW=v10.5.0          # or v10.5.0-mocha, etc. Always read the release notes first
+NEW=v10.6.0-mocha    # mainnet: the release named in the latest announcement Always read the release notes first
 ARCH=$(uname -m); [ "$ARCH" = "aarch64" ] && ARCH=arm64
 cd $HOME
 curl -fLO "https://github.com/celestiaorg/celestia-app/releases/download/$NEW/celestia-app_Linux_${ARCH}.tar.gz"
@@ -53,7 +53,8 @@ celestia-appd config sync --home $CELESTIA_HOME --fibre-home $FIBRE_HOME
 
 | Release | Date | Type | What operators do |
 |---|---|---|---|
-| **`v10.5.0`** / **`v10.5.0-mocha`** | 2026-10-22 / 2026-10-21 | Minor, **non-consensus-breaking**. No height, so roll it out at any time | Swap `celestia-appd` **and** `fibre`, then run `config sync` (adds Fibre `[health]`). Object storage endpoints must be `https://`. See [Fibre step 6](./05-fibre.md#6-health-checks-v1050) |
+| **`v10.6.0-mocha`** (announced) · `v10.6.0` (released, mainnet announcement pending) | 2026-11-05 | Minor, **no coordinated upgrade**, but **upgrade promptly once announced for your network**: celestia-core v0.42.8 (consensus, p2p, mempool, RPC fixes), Hyperlane v1.3.3, proof-position checks, Fibre escrow fixes | Swap `celestia-appd` **and** `fibre`. No config changes. Source builds need **Go 1.26.10** |
+| `v10.5.0` / `v10.5.0-mocha` | 2026-10-22 / 2026-10-21 | Minor, **non-consensus-breaking**. No height, so roll it out at any time | Swap `celestia-appd` **and** `fibre`, then run `config sync` (adds Fibre `[health]`). Object storage endpoints must be `https://`. See [Fibre step 6](./05-fibre.md#6-health-checks-v1050) |
 | `v10.4.0` / `v10.4.0-mocha` | 2026-10-07 / 2026-10-01 | Introduced app v10 + Fibre, activated by `x/signal` | Install the multiplexer, signal, then start and register Fibre after activation |
 
 > [!TIP]
@@ -166,3 +167,4 @@ sudo rm /usr/local/bin/celestia-appd /usr/local/bin/fibre
 ---
 
 [← 05 Fibre](./05-fibre.md) · **06 Maintenance** · [07 Cheat sheet →](./07-cheatsheet.md)
+
