@@ -16,12 +16,12 @@ flowchart LR
 
 | | Mainnet `celestia` | Mocha `mocha-5` |
 |---|---|---|
-| Release | `v10.5.0` | `v10.5.0-mocha` |
+| Release | `v10.5.0` (`v10.6.0` released, awaiting announcement) | `v10.6.0-mocha` |
 | App v10 | ✅ Active since height **15 116 658** (2026-10-20 03:45 UTC) | ✅ Active since height 1 082 619 (2026-09-24) |
 | What to do | **Start and register now.** Every bonded validator is expected to run Fibre | Start and register now |
 
 > [!IMPORTANT]
-> App v10 is **active on both networks**, so Fibre is now part of running a bonded validator. If your node still runs an older binary, it has stopped at the upgrade height. Install `v10.5.0` / `v10.5.0-mocha` first ([step 02](./02-install-celestia-app.md)) and confirm `app_version` = `10` below before you start Fibre.
+> App v10 is **active on both networks**, so Fibre is now part of running a bonded validator. If your node still runs an older binary, it has stopped at the upgrade height. Install `v10.5.0` (mainnet) / `v10.6.0-mocha` first ([step 02](./02-install-celestia-app.md)) and confirm `app_version` = `10` below before you start Fibre.
 
 ```bash
 source $HOME/.celestia-env
@@ -69,7 +69,7 @@ sudo install -m 0755 build/fibre /usr/local/bin/fibre
 </details>
 
 > [!NOTE]
-> Mainnet and Mocha releases ship the same asset names: `fibre_Linux_x86_64.tar.gz` and `fibre_Linux_arm64.tar.gz`, plus `checksums.txt` ([v10.5.0](https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0) · [v10.5.0-mocha](https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0-mocha)).
+> Mainnet and Mocha releases ship the same asset names: `fibre_Linux_x86_64.tar.gz` and `fibre_Linux_arm64.tar.gz`, plus `checksums.txt` ([v10.6.0](https://github.com/celestiaorg/celestia-app/releases/tag/v10.6.0) · [v10.6.0-mocha](https://github.com/celestiaorg/celestia-app/releases/tag/v10.6.0-mocha)).
 
 Prepare the data directory on the dedicated disk:
 
@@ -312,8 +312,9 @@ Start with `grpc_health_probe` and `journalctl -u fibre | grep "health check fai
 | Unknown field error | Remove the reported key from `server_config.toml` |
 | `loading object storage credentials` | The env file or systemd drop-in is missing or wrong |
 
-<sub>Sources: <a href="https://docs.celestia.org/operate/consensus-validators/fibre/">Run a Fibre server</a> · <a href="https://docs.celestia.org/operate/consensus-validators/fibre/metrics/">Fibre metrics</a> · <a href="https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0">v10.5.0 release notes</a> · <a href="https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md#health">Fibre health guide</a></sub>
+<sub>Sources: <a href="https://docs.celestia.org/operate/consensus-validators/fibre/">Run a Fibre server</a> · <a href="https://docs.celestia.org/operate/consensus-validators/fibre/metrics/">Fibre metrics</a> · <a href="https://github.com/celestiaorg/celestia-app/releases/tag/v10.6.0">v10.6.0</a> and <a href="https://github.com/celestiaorg/celestia-app/releases/tag/v10.5.0">v10.5.0</a> release notes · <a href="https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md#health">Fibre health guide</a></sub>
 
 ---
 
 [← 04 Validator](./04-validator.md) · **05 Fibre** · [06 Maintenance →](./06-maintenance.md)
+
