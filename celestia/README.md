@@ -34,7 +34,7 @@ This is a complete runbook for **Celestia consensus operators**. It covers every
 | | |
 |---|---|
 | Chain ID | `celestia` |
-| celestia-app | **`v10.6.0`** (multiplexer. Minor update, no coordinated upgrade. **Upgrade promptly**) |
+| celestia-app | **`v10.5.0`** (multiplexer). `v10.6.0` is [released](https://github.com/celestiaorg/celestia-app/releases/tag/v10.6.0) but not yet announced for mainnet. It is a minor update with no coordinated upgrade |
 | celestia-node | `v0.34.4` |
 | App version 10 / Fibre | ✅ **Active** since height **15 116 658** (2026-10-20 03:45 UTC). Bonded validators run a [Fibre server](./05-fibre.md) |
 | Genesis hash | `6BE39EFD10BA412A9DB5288488303F5DD32CF386707A5BEF33617F4C43301872` |
@@ -93,3 +93,4 @@ The full list is in the [official docs](https://docs.celestia.org/operate/networ
 <p align="center"><a href="./01-requirements.md"><b>Start with step 01: Requirements →</b></a></p>
 
 <img src="../assets/footer.svg" width="100%" alt="Infrastructure, unseen.">
+
