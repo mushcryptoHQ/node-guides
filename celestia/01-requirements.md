@@ -46,10 +46,10 @@ sudo apt install -y curl wget tar aria2 lz4 jq git make clang pkg-config \
 <summary><b>Go toolchain</b> (only needed to build from source)</summary>
 <br>
 
-celestia-app `v10.5.0` builds with **Go 1.26.6**. Check the release notes when you upgrade.
+Source builds of `v10.6.0-mocha` (and `v10.6.0` later on mainnet) need **Go 1.26.10**. Mainnet `v10.5.0` still builds with Go 1.26.6, and 1.26.10 works for both. Check the release notes when you upgrade.
 
 ```bash
-GO_VERSION=1.26.6
+GO_VERSION=1.26.10
 cd $HOME
 wget "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
@@ -135,7 +135,7 @@ EOF
 ```bash
 cat > $HOME/.celestia-env <<'EOF'
 export CHAIN_ID=mocha-5
-export APP_VERSION=v10.5.0-mocha
+export APP_VERSION=v10.6.0-mocha
 export KEYRING_BACKEND=test
 export MONIKER="your-moniker"
 export WALLET=validator
