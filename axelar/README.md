@@ -11,7 +11,7 @@ flowchart LR
 ```
 
 > [!NOTE]
-> Checked on **2026-10-19** against the [Axelar docs](https://docs.axelar.dev/validator/setup/overview/), the [v1.5.3 mainnet upgrade notes](https://docs.axelar.dev/resources/mainnet/upgrades/v153/) and live chain parameters. Parts of the official manual-setup page still show older versions (v1.1.x), so this guide follows the v1.5.3 notes wherever they differ.
+> Checked on **2026-11-05** against the [Axelar docs](https://docs.axelar.dev/validator/setup/overview/), the [v1.5.3 mainnet upgrade notes](https://docs.axelar.dev/resources/mainnet/upgrades/v153/) and live chain parameters. Parts of the official manual-setup page still show older versions (v1.1.x), so this guide follows the v1.5.3 notes wherever they differ.
 
 ## 🗺️ The path
 
@@ -58,3 +58,4 @@ flowchart LR
 <p align="center"><a href="./01-requirements-install.md"><b>Start with step 01 →</b></a></p>
 
 <img src="../assets/footer.svg" width="100%" alt="Infrastructure, unseen.">
+
