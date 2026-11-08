@@ -3,7 +3,7 @@
 This is a runbook for **Shentu mainnet** (`shentu-2.2`). It takes you from a bare server to a signing validator.
 
 > [!NOTE]
-> Checked on **2026-10-29** against [shentufoundation/shentu releases](https://github.com/shentufoundation/shentu/releases), the [mainnet repo](https://github.com/shentufoundation/mainnet) and live chain parameters (the network runs `v2.20.0`).
+> Checked on **2026-11-05** against [shentufoundation/shentu releases](https://github.com/shentufoundation/shentu/releases), the [mainnet repo](https://github.com/shentufoundation/mainnet) and live chain parameters (the network runs `v2.20.0`).
 
 ## 🗺️ The path
 
@@ -20,7 +20,7 @@ This is a runbook for **Shentu mainnet** (`shentu-2.2`). It takes you from a bar
 | | |
 |---|---|
 | Chain ID | `shentu-2.2` |
-| Binary | `shentud`, **`v2.20.0`** (mandatory upgrade at block 31 812 210, 2026-10-29) |
+| Binary | `shentud`, **`v2.20.0`** (mandatory upgrade at block 31 812 210, 2026-10-29). Patch `v2.20.1` (2026-11-03) only fixes `shentud export` |
 | Cosmos SDK / CometBFT | `v0.53.8` / `v0.38` |
 | Go (source builds) | 1.23 |
 | Home | `~/.shentud` |

@@ -21,6 +21,8 @@ Shentu ships **mandatory upgrades** through governance. Each [release](https://g
 
 Patch releases like `v2.16.1` and `v2.16.2` (CometBFT security fixes) are **not state-breaking**. Apply them with a rolling restart, without waiting for a height.
 
+**`v2.20.1`** (2026-11-03) is such a patch. It fixes `shentud export` failing on historical wasm `MsgUpdateParams` proposals, and has no upgrade height. You only need it if you export genesis or state. Otherwise `v2.20.0` is fine.
+
 ```bash
 shentud q gov proposals --proposal-status voting-period
 shentud q upgrade plan
