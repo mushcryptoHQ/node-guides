@@ -18,6 +18,11 @@ akash q gov proposals --proposal-status voting-period
 akash q upgrade plan
 ```
 
+| Upgrade | Height | When | Status |
+|---|---|---|---|
+| **`v2.2.0`** ([#347](https://www.mintscan.io/akash/proposals/347)) | 29 399 482 | ~2026-11-06 14:00–14:30 UTC | Voting ends 2026-11-06 03:56 UTC. Final binary not yet released (only `-rc1`) |
+| `v2.1.0` | — | — | Current network version (until the v2.2.0 height) |
+
 **Swap at the halt height.** Once `meta.json` points to the new version, the "Install `akash`" block from [step 01](./01-requirements-install.md) fetches it:
 
 ```bash

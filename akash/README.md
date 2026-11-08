@@ -3,7 +3,15 @@
 This is a runbook for **Akash mainnet** (`akashnet-2`). It takes you from a bare server to a signing validator.
 
 > [!NOTE]
-> Checked on **2026-10-19** against the official [`meta.json`](https://raw.githubusercontent.com/akash-network/net/main/mainnet/meta.json), the [Akash node docs](https://akash.network/docs/node-operators/) and live chain parameters.
+> Checked on **2026-11-05** against the official [`meta.json`](https://raw.githubusercontent.com/akash-network/net/main/mainnet/meta.json), the [Akash node docs](https://akash.network/docs/node-operators/) and live chain parameters.
+
+> [!IMPORTANT]
+> **Upcoming upgrade: `v2.2.0` at height 29 399 482** (~2026-11-06, 14:00–14:30 UTC), via [Proposal #347](https://www.mintscan.io/akash/proposals/347). Voting ends 2026-11-06 03:56 UTC, with 99.2% YES so far. It adds the `x/sink` module (the Akash side of the Solana portal, with transfers **off**) and updates the Pyth VAA verifier contract. As of 2026-11-05 only `v2.2.0-rc1` is published. Install the final `v2.2.0` once it's released and `meta.json` points to it, then follow [step 04](./04-maintenance.md).
+
+> [!WARNING]
+> **Migration to Solana approved.** [Proposal #346](https://www.mintscan.io/akash/proposals/346) ([AEP-79](https://github.com/akash-network/AEP/tree/main/spec/aep-79)) **passed** on 2026-11-02 with 97.3% YES. Nothing stops on `akashnet-2` yet. Staking, governance and leases continue until a separate **cutover** proposal sets the date. Per the proposal, staking rewards end at cutover, and **the validator role on `akashnet-2` ends at halt, 90 days after cutover**.
+>
+> If you're about to set up a *new* Akash validator, factor this in, and follow the official Akash channels for the cutover timeline.
 
 ## 🗺️ The path
 
